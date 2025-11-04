@@ -56,7 +56,7 @@ const siteConfig = {
     },
     {
       title: 'Dashboard QuickSight',
-      description: "KPI temps-réel sur AWS QuickSight pour la prise de décision.",
+      description: "KPI temps-réel sur AWS QuickSight pour la prise de décision sur le contenu.",
       image: 'images/projet Quicksight.png',
       details: "Modélisation sémantique, calculs KPI et storytelling pour les métiers.",
       link: '#',
@@ -64,7 +64,7 @@ const siteConfig = {
     },
     {
       title: 'Analytique Projet Sunu-BRT',
-      description: "Visualisation et suivi d'indicateurs de performance.",
+      description: "Mise en place et monitoring des serveurs Kajou wifi sur les bus BRT",
       image: 'images/projet sunu-brt.jpg',
       details: "Suivi des usages et performances opérationnelles, alertes et monitoring.",
       link: '#',
@@ -72,25 +72,26 @@ const siteConfig = {
     },
     {
       title: 'Data Viz – Portefeuille Projets',
-      description: 'Synthèse multi-indicateurs pour pilotage hebdomadaire.',
+      description: 'Enquete et Synthèse multi-indicateurs pour pilotage annuel.',
       image: 'images/projet.png',
       details: "Vue consolidée des projets, scoring et priorisation des actions.",
       link: '#',
       type: 'DATA'
     },
+   
     {
-      title: 'Reporting Produit Mobile',
-      description: 'Suivi des usages et rétention – mobile analytics.',
-      image: 'images/ksante-phone-400x640.jpg',
-      details: "Entonnoirs d'activation, cohorte de rétention, segmentation pays.",
+      title: "Suivi utilisation de l'application Kajou à temps réel",
+      description: 'Métriques d’impact clés et storytelling data.',
+      image: 'images/projet 1.png',
+      details: "Indicateurs clés d'impact, données d'utilisation et prise de décision.",
       link: '#',
       type: 'DATA'
     },
     {
-      title: "Rapport d'impact Data",
-      description: 'Métriques d’impact clés et storytelling data.',
-      image: 'images/rapport.png',
-      details: "Indicateurs clés d'impact, profils utilisateurs et prise de décision.",
+      title: 'Rapport trimestriel automatique',
+      description: 'Suivi des usages et rétention – mobile analytics.',
+      image: 'images/Capture d’écran 2025-03-29 à 10.03.34.png',
+      details: "Entonnoirs d'activation, cohorte de rétention, segmentation pays.",
       link: '#',
       type: 'DATA'
     },
@@ -103,14 +104,6 @@ const siteConfig = {
       type: 'WEB'
     },
     {
-      title: 'Dashboard admin React',
-      description: 'Gestion utilisateurs, rôles, analytics intégrés.',
-      image: 'images/design 2.png',
-      details: "React + API REST, tables filtrables et graphiques légers.",
-      link: '#',
-      type: 'WEB'
-    },
-    {
       title: 'Catalogue produits responsive',
       description: 'Grille réactive, fiches, recherche, favoris.',
       image: 'images/projet 1.png',
@@ -118,6 +111,15 @@ const siteConfig = {
       link: '#',
       type: 'WEB'
     },
+    {
+      title: 'Dashboard admin React',
+      description: 'Gestion utilisateurs, rôles, analytics intégrés.',
+      image: 'images/design 2.png',
+      details: "React + API REST, tables filtrables et graphiques légers.",
+      link: '#',
+      type: 'WEB'
+    },
+    
     {
       title: 'Landing page SaaS',
       description: 'Sections pricing, FAQ, call-to-action performants.',
@@ -185,6 +187,10 @@ function applyTranslations(lang) {
   setText('title-web-projects', t.webProjects);
   const modalLink = document.getElementById('modal-link');
   if (modalLink) modalLink.textContent = t.modalOpen;
+  const modalDescTitle = document.getElementById('modal-desc-title');
+  if (modalDescTitle) modalDescTitle.textContent = lang === 'en' ? 'Description' : 'Description';
+  const modalProcessTitle = document.getElementById('modal-process-title');
+  if (modalProcessTitle) modalProcessTitle.textContent = lang === 'en' ? 'Process' : 'Processus';
 }
 
 function renderProjects(containerId = 'projects-cards', limit = 6) {
@@ -335,11 +341,35 @@ function openProjectModal(index) {
   const title = document.getElementById('modal-title');
   const text = document.getElementById('modal-text');
   const link = document.getElementById('modal-link');
+  const tech = document.getElementById('modal-tech');
+  const processList = document.getElementById('modal-process');
+  const modalProblem = document.getElementById('modal-problem');
+  const modalSolution = document.getElementById('modal-solution');
+  const modalResult = document.getElementById('modal-result');
   if (img) { img.src = project.image; img.alt = project.title; }
   const titleText = siteConfig.lang === 'en' && project.title_en ? project.title_en : project.title;
   const detailsText = siteConfig.lang === 'en' && project.details_en ? project.details_en : (project.details || project.description);
   if (title) title.textContent = titleText;
   if (text) text.textContent = detailsText;
+  // Technologies badges
+  if (tech) {
+    tech.className = 'meta';
+    const stack = project.tech || [];
+    tech.innerHTML = stack.map((t) => `<span class="badge">${t}</span>`).join('');
+  }
+  // Process (Problem / Solution / Result)
+  if (modalProblem) modalProblem.textContent = project.problem || '';
+  if (modalSolution) modalSolution.textContent = project.solution || '';
+  if (modalResult) modalResult.textContent = project.result || '';
+  if (processList) {
+    processList.innerHTML = '';
+    const steps = project.process || [];
+    steps.forEach((s) => {
+      const li = document.createElement('li');
+      li.textContent = s;
+      processList.appendChild(li);
+    });
+  }
   if (link) {
     if (project.link && project.link !== '#') {
       link.href = project.link; link.style.display = 'inline-flex';
