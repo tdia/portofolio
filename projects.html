@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projets • Tidiane DIA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html#home" class="brand">Tidiane DIA</a>
+            <button class="nav-toggle" aria-label="Ouvrir le menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <nav class="site-nav" id="site-nav">
+                <ul>
+                    <li><a id="nav-home" href="index.html#home">Home</a></li>
+                    <li><a id="nav-about" href="index.html#about">About</a></li>
+                    <li><a id="nav-contact" href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switch" aria-label="Language switcher">
+                <button class="lang-btn" data-lang="fr">FR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 id="title-data-projects" class="section-title">Projets DATA</h1>
+                <div class="cards" id="projects-data-cards"></div>
+            </div>
+        </section>
+        <section class="section" style="padding-top: 20px;">
+            <div class="container">
+                <h1 id="title-web-projects" class="section-title">Projets WEB</h1>
+                <div class="cards" id="projects-web-cards"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal partagée -->
+    <div class="modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-backdrop" data-close="true"></div>
+        <div class="modal-dialog" role="document">
+            <button class="modal-close" aria-label="Fermer" data-close="true">×</button>
+            <div class="modal-media"><img id="modal-image" alt="" /></div>
+            <div class="modal-body">
+                <h3 id="modal-title"></h3>
+                <p id="modal-text"></p>
+                <div class="modal-actions">
+                    <a id="modal-link" href="#" target="_blank" rel="noopener" class="btn btn-outline">Ouvrir le projet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container"><p>© 2025 Tidiane DIA</p></div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
