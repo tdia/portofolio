@@ -32,8 +32,8 @@ a { color: var(--primary); text-decoration: underline; }
 }
 
 .section {
-  padding: 88px 0;
-  margin-bottom: 18px;
+  padding: 8px 0;
+  margin-bottom: 8px;
 }
 
 .section-title {

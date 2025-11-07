@@ -10,7 +10,7 @@ const siteConfig = {
       navContact: 'Contact',
       ctaProjects: 'Voir mes projets',
       cv: 'Télécharger mon CV',
-      recentProjects: 'Projets récents',
+      recentProjects: 'Mes Réalisations récentes',
       about: 'À propos',
       objectiveTitle: 'Objectif professionnel',
       experiencesTitle: 'Expériences',
@@ -30,7 +30,7 @@ const siteConfig = {
       navContact: 'Contact',
       ctaProjects: 'View my projects',
       cv: 'Download my CV',
-      recentProjects: 'Recent projects',
+      recentProjects: 'Mes Réalisations récentes',
       about: 'About',
       objectiveTitle: 'Professional objective',
       experiencesTitle: 'Experience',
@@ -47,15 +47,15 @@ const siteConfig = {
   },
   projects: [
     {
-      title: 'Pipeline de données & Automatisation',
-      description: "Conception d'un pipeline ETL fiable pour alimenter des dashboards.",
+      title: 'Pipeline de données & Automatisation pour Entreprise KAJOU',
+      description: "Conception d'un pipeline ETL fiable pour alimenter des dashboards de kajou.",
       image: 'images/projet pipeline de données.png',
       details: "Extraction multi-sources, normalisation, orchestration et contrôle qualité pour alimenter un entrepôt unique.",
       link: '#',
       type: 'DATA'
     },
     {
-      title: 'Dashboard QuickSight',
+      title: 'Dashboard QuickSight pour Entreprise KAJOU',
       description: "KPI temps-réel sur AWS QuickSight pour la prise de décision sur le contenu.",
       image: 'images/projet Quicksight.png',
       details: "Modélisation sémantique, calculs KPI et storytelling pour les métiers.",
@@ -63,7 +63,7 @@ const siteConfig = {
       type: 'DATA'
     },
     {
-      title: 'Analytique Projet Sunu-BRT',
+      title: 'Projet Sunu-BRT en partenariat KAJOU et Dakar Mobilité ',
       description: "Mise en place et monitoring des serveurs Kajou wifi sur les bus BRT",
       image: 'images/projet sunu-brt.jpg',
       details: "Suivi des usages et performances opérationnelles, alertes et monitoring.",
@@ -71,7 +71,7 @@ const siteConfig = {
       type: 'DATA'
     },
     {
-      title: 'Data Viz – Portefeuille Projets',
+      title: 'Data Viz – Portefeuille Projets Swedd en partenariat avec Banque Mondiale',
       description: 'Enquete et Synthèse multi-indicateurs pour pilotage annuel.',
       image: 'images/projet.png',
       details: "Vue consolidée des projets, scoring et priorisation des actions.",
