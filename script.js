@@ -146,7 +146,7 @@ const siteConfig = {
   ],
   hero: {
     name: 'TIDIANE DIA',
-    role: 'Ingénieur Data & Aide à la Décision',
+    role: 'Lead Développeur & Senior Software/Data Engineer',
     subtext:
       " Lead Développeur spécialisé dans les projets de digitalisation et le développement de plateformes complètes, déployées à l’échelle nationale et internationale. Mon expertise couvre le développement backend,les architectures logicielles modulaires, la création d’APIs performantes, la data engineering et la conduite technique de projets à fort impact."
   }
@@ -207,6 +207,7 @@ function renderProjects(containerId = 'projects-cards', limit = 6) {
     card.dataset.index = String(index);
     const title = siteConfig.lang === 'en' && p.title_en ? p.title_en : p.title;
     const desc = siteConfig.lang === 'en' && p.description_en ? p.description_en : p.description;
+    const techno =siteConfig.lang === 'en' && p.details ? p.details : p.details
     card.innerHTML = `
       <div class="card-media">
         <img src="${p.image}" alt="${p.title}" loading="lazy" />
@@ -214,6 +215,7 @@ function renderProjects(containerId = 'projects-cards', limit = 6) {
       <div class="card-body">
         <h3 class="card-title">${title}</h3>
         <p class="card-text">${desc}</p>
+         <p class="card-text">${techno}</p>
       </div>
     `;
     card.addEventListener('click', () => openProjectModal(index));
