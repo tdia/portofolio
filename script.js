@@ -46,67 +46,11 @@ const siteConfig = {
     }
   },
   projects: [
-    
     {
-      title: 'Projet Sunu-BRT en partenariat KAJOU et Dakar Mobilité ',
-      description: "Mise en place et monitoring des serveurs Kajou wifi sur les bus BRT",
-      image: 'images/projet sunu-brt.jpg',
-      details: "Python, bash, Suivi des usages et performances opérationnelles, alertes et monitoring.",
-      link: '#',
-      type: 'DATA'
-    },{
-      title: 'Site institutionnel Encaf Sénégal',
-      description: 'Design moderne, accessibilité et SEO technique.',
-      image: 'images/encaf1.png',
-      details: "Stack: WORDPRESS, CSS moderne, animations et Lighthouse > 95.",
-      link: '#',
-      type: 'WEB'
-    },
-    {
-      title: 'Customisation LMS moodle ',
-      description: 'Grille réactive, fiches, recherche, favoris.',
-      image: 'images/lms.png',
-      details: "LMS, Moodle, PHP, UX mobile-first, lazy-loading images, cache navigateur.",
-      link: '#',
-      type: 'WEB'
-    },
-    {
-      title: "Projet Innov’Compétences",
-      description: 'projet expérimental de modernisation de l’offre de formation à l’Ecole nationale d’Administration',
-      image: 'images/innov1.png',
-      details: "LMS, Moodle, Angular, API REST, H5P, Ispring, CSS, Xapi ",
-      link: '#',
-      type: 'WEB'
-    },
-    
-    {
-      title: 'Portail Concours ENA',
-      description: "Dématerialisation processus d'inscription du concours NA",
-      image: 'images/concours.png',
-      details: "A/B testing ,Microservice JAVA, Angular, API REST",
-      link: '#',
-      type: 'WEB'
-    },
-    {
-      title: 'Sorano : Système de Gestion Documentaire',
-      description: 'Authentification, GED, historique, support.',
-      image: 'images/sorano1.png',
-      details: "Formulaires robustes, validations et UX states.",
-      link: '#',
-      type: 'WEB'
-    },
-    {
-      title: 'Mini blog technique',
-      description: 'Articles, tags, recherche instantanée.',
-      image: 'images/projet.png',
-      details: "Markdown, performance et accessibilité AA.",
-      link: '#',
-      type: 'WEB'
-    },{
       title: 'Pipeline de données & Automatisation pour Entreprise KAJOU',
       description: "Conception d'un pipeline ETL fiable pour alimenter des dashboards de kajou.",
       image: 'images/projet pipeline de données.png',
-      details: "Python, Aws Glue, Aws Lambda, Aws aurora, Extraction multi-sources, normalisation, orchestration et contrôle qualité pour alimenter un entrepôt unique.",
+      details: "Extraction multi-sources, normalisation, orchestration et contrôle qualité pour alimenter un entrepôt unique.",
       link: '#',
       type: 'DATA'
     },
@@ -114,7 +58,15 @@ const siteConfig = {
       title: 'Dashboard QuickSight pour Entreprise KAJOU',
       description: "KPI temps-réel sur AWS QuickSight pour la prise de décision sur le contenu.",
       image: 'images/projet Quicksight.png',
-      details: "Aws QuickSight,Modélisation sémantique, calculs KPI et storytelling pour les métiers.",
+      details: "Modélisation sémantique, calculs KPI et storytelling pour les métiers.",
+      link: '#',
+      type: 'DATA'
+    },
+    {
+      title: 'Projet Sunu-BRT en partenariat KAJOU et Dakar Mobilité ',
+      description: "Mise en place et monitoring des serveurs Kajou wifi sur les bus BRT",
+      image: 'images/projet sunu-brt.jpg',
+      details: "Suivi des usages et performances opérationnelles, alertes et monitoring.",
       link: '#',
       type: 'DATA'
     },
@@ -131,7 +83,7 @@ const siteConfig = {
       title: "Suivi utilisation de l'application Kajou à temps réel",
       description: 'Métriques d’impact clés et storytelling data.',
       image: 'images/projet 1.png',
-      details: "Looker Studio,Indicateurs clés d'impact, données d'utilisation et prise de décision.",
+      details: "Indicateurs clés d'impact, données d'utilisation et prise de décision.",
       link: '#',
       type: 'DATA'
     },
@@ -139,18 +91,66 @@ const siteConfig = {
       title: 'Rapport trimestriel automatique',
       description: 'Suivi des usages et rétention – mobile analytics.',
       image: 'images/Capture d’écran 2025-03-29 à 10.03.34.png',
-      details: "Looker Studio,Entonnoirs d'activation, cohorte de rétention, segmentation pays.",
+      details: "Entonnoirs d'activation, cohorte de rétention, segmentation pays.",
       link: '#',
       type: 'DATA'
     },
+    {
+      title: 'Site vitrine institutionnel',
+      description: 'Design moderne, accessibilité et SEO technique.',
+      image: 'images/design.png',
+      details: "Stack: HTML5, CSS moderne, animations et Lighthouse > 95.",
+      link: '#',
+      type: 'WEB'
+    },
+    {
+      title: 'Catalogue produits responsive',
+      description: 'Grille réactive, fiches, recherche, favoris.',
+      image: 'images/projet 1.png',
+      details: "UX mobile-first, lazy-loading images, cache navigateur.",
+      link: '#',
+      type: 'WEB'
+    },
+    {
+      title: 'Dashboard admin React',
+      description: 'Gestion utilisateurs, rôles, analytics intégrés.',
+      image: 'images/design 2.png',
+      details: "React + API REST, tables filtrables et graphiques légers.",
+      link: '#',
+      type: 'WEB'
+    },
+    
+    {
+      title: 'Landing page SaaS',
+      description: 'Sections pricing, FAQ, call-to-action performants.',
+      image: 'images/Capture d’écran 2025-03-29 à 06.47.11.png',
+      details: "A/B testing des CTA, intégration analytics.",
+      link: '#',
+      type: 'WEB'
+    },
+    {
+      title: 'Espace client sécurisé',
+      description: 'Authentification, profil, historique, support.',
+      image: 'images/Capture d’écran 2025-03-29 à 10.03.34.png',
+      details: "Formulaires robustes, validations et UX states.",
+      link: '#',
+      type: 'WEB'
+    },
+    {
+      title: 'Mini blog technique',
+      description: 'Articles, tags, recherche instantanée.',
+      image: 'images/projet.png',
+      details: "Markdown, performance et accessibilité AA.",
+      link: '#',
+      type: 'WEB'
+    }
   ],
   hero: {
     name: 'TIDIANE DIA',
-    role: 'Lead Développeur & Senior Software/Data Engineer',
+    role: 'Ingénieur Data & Aide à la Décision',
     subtext:
-      " Lead Développeur spécialisé dans les projets de digitalisation et le développement de plateformes complètes, déployées à l’échelle nationale et internationale. Mon expertise couvre le développement backend,les architectures logicielles modulaires, la création d’APIs performantes, la data engineering et la conduite technique de projets à fort impact."
+      "Passionné par la Data, la Business Intelligence et l’automatisation des décisions. J’accompagne les organisations dans la construction de pipelines, la création de dashboards impactants et la valorisation des données pour une meilleure prise de décision."
   }
-  
 };
 
 function setHeroContent() {
@@ -207,7 +207,6 @@ function renderProjects(containerId = 'projects-cards', limit = 6) {
     card.dataset.index = String(index);
     const title = siteConfig.lang === 'en' && p.title_en ? p.title_en : p.title;
     const desc = siteConfig.lang === 'en' && p.description_en ? p.description_en : p.description;
-    const techno =siteConfig.lang === 'en' && p.details ? p.details : p.details
     card.innerHTML = `
       <div class="card-media">
         <img src="${p.image}" alt="${p.title}" loading="lazy" />
@@ -215,7 +214,6 @@ function renderProjects(containerId = 'projects-cards', limit = 6) {
       <div class="card-body">
         <h3 class="card-title">${title}</h3>
         <p class="card-text">${desc}</p>
-         <p class="card-text">${techno}</p>
       </div>
     `;
     card.addEventListener('click', () => openProjectModal(index));
@@ -415,5 +413,3 @@ document.addEventListener('DOMContentLoaded', () => {
   setupContactForm();
   preloadImages();
 });
-
-
